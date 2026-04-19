@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <head> 
 	<title>Hello World</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
@@ -52,8 +52,8 @@ function catAdd() {
 function calculateResults() { // Takes all the answers and turns them into percentages for a cat or dog
   var total = dog_count + cat_count; // Adds the cat and dog answers together
 
-  var allergyPercent = (dog_count / total) * 100; // Gives a percentage for the potential of allergies
-  var coldPercent = (cat_count / total) * 100; // Gives a percentage for the potential of a cold
+  var dogPercent = (dog_count / total) * 100; // Gives a percentage for the potential of allergies
+  var catPercent = (cat_count / total) * 100; // Gives a percentage for the potential of a cold
 
   document.getElementById("results").innerHTML =
     "Probability it is dog = " + dogPercent.toFixed(0) + "%" +
@@ -150,15 +150,16 @@ function calculateResults() { // Takes all the answers and turns them into perce
   <div class="w3-container w3-flat-carrot"><h1>Question 4</h1></div>
 
   <div class="w3-container">
-    <p>Do you like cat reels on Instagram?></p>
+    <p>Do you like cat reels on Instagram?</p>
 
-    <a href="#five" onclick="catAdd()" class="w3-btn w3-black">Yes</a>
-    <a href="#five" onclick="dogAdd()" class="w3-btn w3-black">No</a>
+   <a href="#resultsPage" onclick="catAdd(); calculateResults();" class="w3-btn w3-black w3-round">Yes</a>
+    <a href="#resultsPage" onclick="dogAdd(); calculateResults();" class="w3-btn w3-black w3-round">No</a>
   </div>
 	  <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
-	<!-- This is the results page that displays the percentages of the potential of a cold or allergy -->
+
+	<!-- This is the results page that displays the percentages of the potential of a cat or dog -->
 <div class="page" id="resultsPage">
 
   <div class="w3-container w3-flat-carrot">
@@ -175,7 +176,6 @@ function calculateResults() { // Takes all the answers and turns them into perce
 </div>
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
 	
 </body>
 </html>
